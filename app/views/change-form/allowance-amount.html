@@ -1,0 +1,109 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layouts/layout-transactional.html' %}
+{% from 'details/macro.njk' import details %}
+{% from 'button/macro.njk' import button %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Document upload service 
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- Change the page title here -->
+    
+      <div class="nhsuk-form-group">
+
+        <h1 class="nhsuk-label-wrapper">
+          <span class="nhsuk-caption-l nhsuk-caption--bottom">Change details</span>
+            <label class="nhsuk-label nhsuk-label--l" for="example-heading">
+                What percentage or amount of the salary is the allowance?
+            </label>
+          </h1>
+
+          <div style="margin-bottom:50px;">
+          <div class="nhsuk-form-group" style="float: left; padding-right: 20px;">
+            <label class="nhsuk-label" for="input-width-5">
+              Amount
+            </label>
+            <input class="nhsuk-input nhsuk-input--width-5" id="input-width-5" name="test-width-5" type="text">
+          </div>
+     
+  
+
+          <div class="nhsuk-form-group" style="float: left; padding-right: 20px;">
+            <label class="nhsuk-label" for="select-1" >
+              Unit
+            </label>
+            <select class="nhsuk-select" id="select-1" name="select-1"> 
+              <option value="1">%</option>
+              <option value="2" selected>£</option>
+            </select>
+          </div>
+
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="select-1">
+              Per
+            </label>
+            <select class="nhsuk-select" id="select-1" name="select-1">
+              <option value="1">Month</option>
+              <option value="2" selected>Year</option>
+            </select>
+          </div>
+
+          </div>
+
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="input-width-2">
+             Number of months or years for the additional salary payments
+            </label>
+            <input class="nhsuk-input nhsuk-input--width-2" id="input-width-2" name="test-width-2" type="text">
+          </div>
+     
+      </div>
+    
+     
+
+      {{ button({
+        "text": "Continue",
+        "href": "effective-date-of-change"
+      }) }}
+
+
+     
+
+
+      <!-- Add your content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+
+    </div>
+    </div>
+
+
+
+
+      
+      {% endblock %}
