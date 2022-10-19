@@ -33,48 +33,63 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
+      <form method="post" action="">
       <!-- Change the page title here -->
-    
-      <h1 class="nhsuk-heading-l">
-        <span class="nhsuk-caption-l nhsuk-caption--bottom">Line manager details</span>
-        Who authorised the change?
-      </h1>
-
-
       <div class="nhsuk-form-group">
-        <label class="nhsuk-label" for="input-width-20">
-          First name
-        </label>
-        <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
-      </div> 
 
-      <div class="nhsuk-form-group">
-        <label class="nhsuk-label" for="input-width-20">
-          Last name
-        </label>
-        <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+            <h1 class="nhsuk-fieldset__heading">
+              <span class="nhsuk-caption-l nhsuk-caption--bottom">Change details</span>
+
+             Can this change be made in ESR?
+            </h1>
+          </legend>
+      
+          <div class="nhsuk-radios nhsuk-radios--inline">
+      
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="esr-change-reason" onclick="setLocation(this);">
+              <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
+                Yes
+              </label>
+            </div>
+      
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="example-inline-2" name="example-inline" type="radio" value=".//employee-details/name" onclick="setLocation(this);">
+              <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
+                No
+              </label>
+            </div>
+      
+          </div>
+        </fieldset>
+      
       </div>
+
+
      
-
-    
-
       {{ button({
-        "text": "Continue",
-        "href": "job-title"
+        "text": "Continue"
       }) }}
 
 
-     
+    
 
 
       <!-- Add your content here -->
       <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
-
+</form>
     </div>
     </div>
 
 
 
-
+    <script>
+      function setLocation(element) {
+              document.forms[0].action = element.value
+      }
+    </script>
+        
       
       {% endblock %}
