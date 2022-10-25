@@ -32,17 +32,19 @@
 {% block content %}
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
-
+      <form class="form" method="post">
       <!-- Change the page title here -->
       <h1 class="nhsuk-heading-l">
        Sign in 
       </h1>
 
+ 
       <div class="nhsuk-form-group">
-        <label class="nhsuk-label" for="example">
+        <label class="nhsuk-label" for="emailAddress">
           Email address
         </label>
-        <input class="nhsuk-input" id="example" name="example" type="text">
+        <input class="nhsuk-input" id="email-address" name="emailAddress" type="email" spellcheck="false" autocomplete="email">
+    
       </div>
 
      
@@ -59,10 +61,9 @@
     
 
       {{ button({
-        "text": "Sign in",
-        "href": "email-auth-code"
+        "text": "Sign in"   
       }) }}
-
+      </form>
 
       <hr>
 
@@ -77,14 +78,14 @@
       {{ button({
         "text": "Create an account",
         "classes": "nhsuk-button--secondary",
-        "href": ""
+        "href": "#"
       }) }}
 
 
 
       <!-- Add your content here -->
       <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
-
+ 
     </div>
     </div>
 

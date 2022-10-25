@@ -40,7 +40,20 @@
 
       <p class="nhsuk-body">Enter the four digit security code we've sent to your email address [test.test@nhs.net]</p>
 
-      <p class="nhsuk-body"><a href="#">Not received yoir security code?</a></p>
+
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            Not received your security code?
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>You should check you have entered your email address correctly and try to resend the one time code.
+          </p>
+      
+        </div>
+      </details>
+
 
       <div class="nhsuk-form-group">
         <label class="nhsuk-label" for="input-width-10">
@@ -57,6 +70,13 @@
       {{ button({
         "text": "Continue",
         "href": ".//employee-details/name"
+      }) }}
+
+      <br>
+
+      {{ button({
+        "text": "Resend code",
+        "classes": "nhsuk-button--secondary"
       }) }}
 
 

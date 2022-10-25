@@ -14,7 +14,7 @@
 
 <!-- Set the page title -->
 {% block pageTitle %}
-  Contact the NHSBSA
+Document upload service 
 {% endblock %}
 
 <!-- For adding a breadcrumb -->
@@ -27,73 +27,70 @@
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
 {% block outerContent %}
 
+
 {% endblock %}
 
 <!-- For adding page content -->
 <!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
-<div class="nhsuk-grid-row">
+
+<div >
+  {{ backLink({
+      "href": "javascript:history.go(-1)",
+      "text": "Go back"
+    }) }}
+  </div>
+
+  <div class="nhsuk-grid-row" >
     <div class="nhsuk-grid-column-two-thirds">
 
-      <div class="nhsuk-panel nhsuk-panel--confirmation nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-4">
-        <h1 class="nhsuk-panel__title">
-          You have chosen for the change to be made in ESR
-        </h1>
+        <div class="nhsuk-form-group">
+  
+                <h1 class="nhsuk-heading-l" >
+                  <span class="nhsuk-caption-l nhsuk-caption--bottom">Change details</span>
+                    Add a document to support your change request
+               </h1>
 
-      </div>
+               <br>
 
-    
-      <p>You will be signed out of the service when you close the tab or select finish.</p>
-      <a class="nhsuk-button" href="email-only-login-screen " role="button">Finish</a>
+               <p>The file you choose must:</p>
+               <ul class="nhsuk-list nhsuk-list--bullet">
+                <li>not be larger than 1MB in file size</li>
+                <li>be a DOC, DOCX or PDF</li>
+               </ul>
 
+               <br>
+
+               <div class="nhsuk-form-group">
+                <label class="nhsuk-label" for="file-upload-1">
+                  Upload a file
+                </label>
+                <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+              </div>
+
+
+
+
+
+
+
+              </div>
+
+       
+
+          <br>
+
+        
      
+
+  {{ button({
+    "text": "Upload document",
+    "href": "doc-added"
+  }) }}
+  </div>
   </div>
 
   <script src="https://service-manual.nhs.uk/js/main.min.js" defer></script>
 
-  <style>
-
-.nhsuk-panel {
-    margin-bottom: 40px;
-    margin-top: 40px;
-    padding: 24px;
-    background-color: #ffffff;
-    color: #212b32;
-    width: 100%;
-}
-
-.nhsuk-panel--confirmation {
-    padding-bottom: 56px;
-    padding-top: 56px;
-}
-
-.nhsuk-u-margin-top-0 {
-    margin-top: 0 !important;
-}
-
-.nhsuk-u-margin-bottom-4 {
-    margin-bottom: 24px !important;
-}
-
-.nhsuk-panel__title {
-    margin-bottom: 24px;
-}
-
-.nhsuk-panel__body {
-    font-size: 24px;
-    font-size: 1.5rem;
-    line-height: 1.33333;
-}
-.nhsuk-panel__title {
-    margin-bottom: 16px;
-    text-align: center;
-}
-
-.nhsuk-panel__body {
-    font-weight: 400;
-    line-height: 1.4;
-    text-align: center;
-}
-  </style>
       
       {% endblock %}

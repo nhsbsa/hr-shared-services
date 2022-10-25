@@ -34,27 +34,53 @@
     <div class="nhsuk-grid-column-two-thirds">
 
       <!-- Change the page title here -->
+      <h1 class="nhsuk-heading-l">
+       Sign in 
+      </h1>
+
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="emailAddress">
+          Email address
+        </label>
+        <input class="nhsuk-input" id="email-address" name="emailAddress" type="email" spellcheck="false" autocomplete="email">
+    
+      </div>
+
+     
+     
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="example">
+          Password
+        </label>
+        <input class="nhsuk-input" id="example" name="example" type="text">
+      </div>
     
 
+      <p class="nhsuk-body"><a href="#">Forgot your password?</a></p>
     
-      <div class="nhsuk-form-group">
-        <h1 class="nhsuk-label-wrapper">
-          <span class="nhsuk-caption-l nhsuk-caption--bottom">Employee details</span>
-            <label class="nhsuk-label nhsuk-label--l" for="example-heading">
-              What is the Jane Doe's current cost centre?
-            </label>
-          </h1>
-        <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
-      </div>
-     
 
       {{ button({
-        "text": "Continue",
-        "href": "../change-type"
+        "text": "Sign in",
+        "href": "email-auth-code-esr"
       }) }}
 
 
-     
+      <hr>
+
+      <h2 class="nhsuk-heading-m">
+        If you do not have an account 
+      </h2>
+
+      <p>
+        Content here around needing to create an account if you don't have one
+      </p>
+
+      {{ button({
+        "text": "Create an account",
+        "classes": "nhsuk-button--secondary",
+        "href": ""
+      }) }}
+
 
 
       <!-- Add your content here -->

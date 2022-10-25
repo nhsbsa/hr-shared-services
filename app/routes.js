@@ -12,7 +12,7 @@ const router = express.Router();
 
 // The URL here needs to match the URL of the page that the user is on
 // when they type in their email address
-router.post('/change-form/email-only-login-screen', function (req, res) {
+router.post('/change-form/login-screen', function (req, res) {
 
   notify.sendEmail(
     // this long string is the template ID, copy it from the template
