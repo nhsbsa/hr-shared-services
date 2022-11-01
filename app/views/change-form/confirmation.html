@@ -6,6 +6,7 @@
 {% extends 'layouts/layout-transactional.html' %}
 {% from 'details/macro.njk' import details %}
 {% from 'radios/macro.njk' import radios %}
+{% from 'button/macro.njk' import button %}
 <!-- 
   In /views/layout.html you can:
     - change the header and footer 
@@ -42,7 +43,7 @@
 
       <div class="nhsuk-panel nhsuk-panel--confirmation nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-4">
         <h1 class="nhsuk-panel__title">
-          The change request for [Employee name] has been submitted
+          The change request for Jane Doe's has been submitted
         </h1>
 
         <div class="nhsuk-panel__body">
@@ -51,13 +52,29 @@
         </div>
       </div>
 
-      <p class="nhsuk-body">We've sent you a confirmation email. Check your spam or junk folder if you cannot see it.</p>
+      <p class="nhsuk-body">We've sent you a confirmation email. Check your spam or junk folder if you cannot find it.</p>
 
       <h2 class="nhsuk-heading-m">What happens next</h2>
-      <p>Is there an SLA, does the line manager get informared once the chnage is made? does the employee get informaed once the change is made? </p>
 
       <p>You will be signed out of the service when you close the tab or select finish.</p>
-      <a class="nhsuk-button" href="email-only-login-screen " role="button">Finish</a>
+
+      <p>Alternatively, you can make a change request for another employee.</p>
+
+
+
+      {{ button({
+        "text": "Finish",
+        "href": "login-screen"
+      }) }}
+
+<br>
+
+
+{{ button({
+  "text": "New change request",
+  "classes": "nhsuk-button--secondary",
+  "href": ".//employee-details/name"
+}) }}
 
      
   </div>

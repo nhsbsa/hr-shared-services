@@ -32,65 +32,44 @@
 {% block content %}
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
-      <form class="form" method="post">
+
       <!-- Change the page title here -->
+    
       <h1 class="nhsuk-heading-l">
-       Sign in 
+        <span class="nhsuk-caption-l nhsuk-caption--bottom">Line manager details</span>
+        Which senior finance lead authorised the change?
       </h1>
 
- 
-      <div class="nhsuk-form-group">
-        <label class="nhsuk-label" for="emailAddress">
-          Email address
-        </label>
-        <input class="nhsuk-input" id="email-address" name="emailAddress" type="email" spellcheck="false" autocomplete="email">
-    
-      </div>
 
-     
-     
       <div class="nhsuk-form-group">
-        <label class="nhsuk-label" for="example">
-          Password
+        <label class="nhsuk-label" for="input-width-20">
+          First name
         </label>
-        <input class="nhsuk-input" id="example" name="example" type="text">
-      </div>
-    
+        <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+      </div> 
 
-      <p class="nhsuk-body"><a href="#">Forgot your password?</a></p>
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="input-width-20">
+          Last name
+        </label>
+        <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+      </div>
+     
+
     
 
       {{ button({
-        "text": "Sign in"   
-      }) }}
-      </form>
-
-      <hr>
-
-      <h2 class="nhsuk-heading-m">
-        If you do not have an account 
-      </h2>
-
-      <p>
-      
-        You can create an account, which the HR Shared Services team will need to approve. 
-        
-        </p>
-        <p>
-        Approval of your account creation can take up to 48 hours, you will recieve an email with an approval decision.
-      </p>
-
-      {{ button({
-        "text": "Create an account",
-        "classes": "nhsuk-button--secondary",
-        "href": "#"
+        "text": "Continue",
+        "href": "effective-date-of-change"
       }) }}
 
+
+     
 
 
       <!-- Add your content here -->
       <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
- 
+
     </div>
     </div>
 
