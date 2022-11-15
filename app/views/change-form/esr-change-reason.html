@@ -30,10 +30,17 @@
 <!-- For adding page content -->
 <!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
+
+<div >
+  {{ backLink({
+      "href": "javascript:history.go(-1)",
+      "text": "Go back"
+    }) }}
+  </div>
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
-      <form method="post" action=".//employee-details/name">
+      <form method="post" action="landing-page">
       <!-- Change the page title here -->
       <div class="nhsuk-form-group">
 

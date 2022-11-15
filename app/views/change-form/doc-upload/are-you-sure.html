@@ -25,17 +25,20 @@
 <!-- For adding a back link -->
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
 {% block outerContent %}
-<div style="margin-top: 30px;">
-    {{ backLink({
-        "href": "javascript:history.go(-1)",
-        "text": "Go back"
-      }) }}
-    </div>
+
 {% endblock %}
 
 <!-- For adding page content -->
 <!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
+
+
+<div >
+  {{ backLink({
+      "href": "javascript:history.go(-1)",
+      "text": "Go back"
+    }) }}
+  </div>
   <div class="nhsuk-grid-row" >
     <div class="nhsuk-grid-column-two-thirds">
  

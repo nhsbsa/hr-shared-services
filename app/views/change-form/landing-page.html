@@ -30,6 +30,8 @@
 <!-- For adding page content -->
 <!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
+
+
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
@@ -39,14 +41,14 @@
       </h1>
 
       <p class="nhsuk-body">
-      You can use this portal to make changes to:
+      You can use this portal to make changes to the following:
       </p>
 
      
       <ul class="nhsuk-list nhsuk-list--bullet">
         <li>allowances</li>
         <li>cost centre</li>
-        <li>band/grade</li>
+        <li>band or grade</li>
         <li>hours</li>
         <li>pay and pay-step</li>
         <li>unpaid leave or career break</li>
@@ -55,13 +57,20 @@
         <li>other</li>
       </ul>
 
-      
+      <p class="nhsuk-body">Some changes will require evidence to be uploaded for the change request to be accepted.</p>
+
+      <p class="nhsuk-body">The following evidence is accepted:</p>
+
+      <ul class="nhsuk-list nhsuk-list--bullet">
+        <li>utility bill</li>
+        <li>marriage certificate</li>
+      </ul>
 
       
 
       {{ button({
         "text": "Start",
-        "href": "login-screen"
+        "href": ".//employee-details/name"
       }) }}
 
       <!-- Add your content here -->

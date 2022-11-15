@@ -3,7 +3,7 @@
 <!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
 
 <!-- Extends the layout from /views/layout.html -->
-{% extends 'layouts/layout-transactional.html' %}
+{% extends 'layouts/layout.html' %}
 {% from 'details/macro.njk' import details %}
 {% from 'button/macro.njk' import button %}
 <!-- 
@@ -57,7 +57,7 @@
       </div>
     
 
-      <p class="nhsuk-body"><a href="#">Forgot your password?</a></p>
+      <p class="nhsuk-body"><a href="forgot-password">Forgot your password?</a></p>
     
 
       {{ button({
@@ -83,7 +83,7 @@
       {{ button({
         "text": "Create an account",
         "classes": "nhsuk-button--secondary",
-        "href": "#"
+        "href": "create-account"
       }) }}
 
 
