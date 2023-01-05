@@ -1,0 +1,100 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+<link href="/stylesheets/main-2b7d08c610bd52d03b460d05278fc344.css" rel="stylesheet" media="all" />
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layouts/layout-transactional.html' %}
+{% from 'details/macro.njk' import details %}
+{% from 'button/macro.njk' import button %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Document upload service 
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+
+<div >
+  {{ backLink({
+      "href": "javascript:history.go(-1)",
+      "text": "Go back"
+    }) }}
+  </div>
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <div class="nhsuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1">
+        <h2 class="nhsuk-error-summary__title" id="error-summary-title">
+          There is a problem
+        </h2>
+        <div class="nhsuk-error-summary__body">
+          <p>
+          </p>
+          <ul class="nhsuk-list nhsuk-error-summary__list">
+            <li>
+              <a href="#example-error-1">The additional information must be 50 characters or less.</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    
+      <div class="nhsuk-form-group nhsuk-form-group--error">
+
+        
+      <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="50">
+        <div class="nhsuk-form-group">
+          <h1 class="nhsuk-label-wrapper"><label class="nhsuk-label nhsuk-label--l" for="with-hint">
+            <span class="nhsuk-caption-l nhsuk-caption--bottom">Change details</span>
+              Add additional information to the change request
+            </label>
+          </h1>
+          <div id="with-hint-hint" class="nhsuk-hint">
+            Do not include personal or financial information like your National Insurance number or credit card details.
+          </div>
+          <span class="nhsuk-error-message" id="example-error-error">
+            <span class="nhsuk-u-visually-hidden">Error:</span> You must provide an explanation.
+          </span>
+          <textarea class="nhsuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="5" aria-describedby="with-hint-info with-hint-hint"></textarea>
+        </div>
+        <div id="with-hint-info" class="nhsuk-hint govuk-character-count__message">
+          You can enter up to 50 characters
+        </div>
+      </div>
+     
+
+      {{ button({
+        "text": "Continue",
+        "href": "another-change"
+      }) }}
+
+
+     
+
+
+      <!-- Add your content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+
+    </div>
+    </div>
+
+    
+   
+      {% endblock %}

@@ -40,7 +40,7 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
-      <form method="post" action="./employee-details/name">
+      <form method="post" action="">
       <!-- Change the page title here -->
       <div class="nhsuk-form-group">
 
@@ -49,20 +49,38 @@
             <h1 class="nhsuk-fieldset__heading">
               <span class="nhsuk-caption-l nhsuk-caption--bottom">Change details</span>
 
-             Why could the change not be made?
-            </h1>
+              Why could the change not be made?
+            </h1> 
           </legend>
       
-          <div class="nhsuk-hint" id="example-hint">
-            For example, if Manage Self-Service is unavailable.
+          <div class="nhsuk-radios">
+      
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="./employee-details/name"onclick="setLocation(this);" >
+              <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
+                Electronic Staff Record (ESR) is unavailable
+              </label>
+            </div>
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="./employee-details/name" onclick="setLocation(this);">
+              <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
+                The users password needs to be reset
+              </label>
+            </div>
+      
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="example-inline-2" name="example-inline" type="radio" value="esr-change-reason" onclick="setLocation(this);">
+              <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
+                Other
+              </label>
+            </div>
+      
           </div>
-          <textarea class="nhsuk-textarea" id="example" name="example" rows="5" aria-describedby="example-hint"></textarea>
-
-
         </fieldset>
       
       </div>
-
+<a href="./employee-details/name"></a>
 
      
       {{ button({
