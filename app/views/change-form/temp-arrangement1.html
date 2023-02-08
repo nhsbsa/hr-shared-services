@@ -30,7 +30,6 @@
 <!-- For adding page content -->
 <!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
-
 <div >
   {{ backLink({
       "href": "javascript:history.go(-1)",
@@ -39,22 +38,24 @@
   </div>
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
+
       <form method="post" action="">
+      <!-- Change the page title here -->
       <div class="nhsuk-form-group">
 
         <fieldset class="nhsuk-fieldset">
           <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
             <h1 class="nhsuk-fieldset__heading">
               <span class="nhsuk-caption-l nhsuk-caption--bottom">Change details</span>
-             Do you want to add any extra information to the change request?
+
+             Is the change a temporary arrangement?
             </h1>
           </legend>
-
       
           <div class="nhsuk-radios nhsuk-radios--inline">
       
             <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="additional-info-for-change" onclick="setLocation(this);">
+              <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="temp-date1" onclick="setLocation(this);">
               <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
                 Yes
               </label>
@@ -72,6 +73,8 @@
       
       </div>
 
+
+     
       {{ button({
         "text": "Continue"
       }) }}
@@ -79,11 +82,13 @@
 
     
 
+
       <!-- Add your content here -->
       <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
-    </form>
+</form>
     </div>
     </div>
+
 
 
     <script>
@@ -91,6 +96,6 @@
               document.forms[0].action = element.value
       }
     </script>
-
+        
       
       {% endblock %}
