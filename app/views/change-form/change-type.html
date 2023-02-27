@@ -14,7 +14,7 @@
 
 <!-- Set the page title -->
 {% block pageTitle %}
-  Document upload service 
+what type of change do you want to make? - Submit a request to NHS Recruitment Services - NHSBSA
 {% endblock %}
 
 <!-- For adding a breadcrumb -->
@@ -57,6 +57,24 @@
       
           <div class="nhsuk-radios">
       
+              
+
+            <div class="nhsuk-hint nhsuk-u-margin-bottom-2">
+              Select one option
+            </div>
+
+
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="date-of-absence" onclick="setLocation(this);">
+              <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
+                Absence removal
+              </label>
+              <div class="nhsuk-hint nhsuk-radios__hint" id="example-hints-1-item-hint">
+                Includes sickness, annual leave and annual leave amendments 
+              </div>
+            </div>
+
             <div class="nhsuk-radios__item">
               <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="type-of-allowance" onclick="setLocation(this);">
               <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
@@ -64,6 +82,16 @@
               </label>
               <div class="nhsuk-hint nhsuk-radios__hint" id="example-hints-1-item-hint">
                 Includes all allowances
+              </div>
+            </div>
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="new-position-number" onclick="setLocation(this);">
+              <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
+                Band or grade
+              </label>
+              <div class="nhsuk-hint nhsuk-radios__hint" id="example-hints-1-item-hint">
+                Includes grade and promotions
               </div>
             </div>
       
@@ -74,17 +102,19 @@
               </label>
             </div>
 
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="example-inline-2" name="example-inline" type="radio" value="effective-date-of-change" onclick="setLocation(this);">
+              <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
+                Extension of probation
+              </label>
+            </div>
 
             <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="new-position-number" onclick="setLocation(this);">
-                <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
-                  Band or grade
-                </label>
-                <div class="nhsuk-hint nhsuk-radios__hint" id="example-hints-1-item-hint">
-                  Includes grade and promotions
-                </div>
-              </div>
-
+              <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="future-date-change" onclick="setLocation(this);">
+              <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
+                Future date changes
+              </label>
+            </div>
 
             <div class="nhsuk-radios__item">
                 <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="hours" onclick="setLocation(this);">
@@ -92,15 +122,22 @@
                   Hours
                 </label>
                 <div class="nhsuk-hint nhsuk-radios__hint" id="example-hints-1-item-hint">
-                  Includes term time working, flexible working and annualised hours 
-                </div>
+                  Includes term-time working, flexible working and annualised hours                </div>
               </div>
         
+
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="./doc-upload/doc-upload" onclick="setLocation(this);">
+                <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
+                  Maternity, Paternity, Shared Parental or Adoption leave details
+                </label>
+              </div>
+
         
               <div class="nhsuk-radios__item">
                 <input class="nhsuk-radios__input" id="example-inline-2" name="example-inline" type="radio" value="effective-date-of-change" onclick="setLocation(this);">
                 <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
-                  Pay and pay-step
+                  Pay and pay step point
                 </label>
                 <div class="nhsuk-hint nhsuk-radios__hint" id="example-hints-1-item-hint">
                   Includes changes to pay step point, personal salaries and career progression
@@ -116,48 +153,14 @@
               </div>
         
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="./doc-upload/doc-upload" onclick="setLocation(this);">
-                <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
-                  Maternity, Paternity, Shared Parental or Adoption leave details
-                </label>
-              </div>
-
-
-              <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-inline-2" name="example-inline" type="radio" value="effective-date-of-change" onclick="setLocation(this);">
-                <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
-                  Extension of probation
-                </label>
-              </div>
-      
-
-            <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="date-of-absence" onclick="setLocation(this);">
-                <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
-                  Absence removal
-                </label>
-                <div class="nhsuk-hint nhsuk-radios__hint" id="example-hints-1-item-hint">
-                  Includes sickness, annual leave and annual leave amendments 
-                </div>
-              </div>
-
-
-              <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="future-date-change" onclick="setLocation(this);">
-                <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
-                  Future date changes
-                </label>
-              </div>
-
-            <div class="nhsuk-radios__item">
                 <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="additional-info" onclick="setLocation(this);">
                 <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
                   Other
                 </label>
                 <div class="nhsuk-hint nhsuk-radios__hint" id="example-hints-1-item-hint">
-                  Visa details, upload a document unrealted to above changes
-                </div>
+                  Includes Visa details and upload a document unrelated to listed changes                </div>
               </div>
+        
         
 
           </div>
