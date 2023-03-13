@@ -46,24 +46,31 @@ Is [employee name] taking a career break? - Submit a request to NHS Recruitment 
           <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
             <h1 class="nhsuk-fieldset__heading">
               <span class="nhsuk-caption-l nhsuk-caption--bottom">Change details</span>
-             Is Jane Doe taking a career break?
+             What change do you need to make to Jane Doe's working situation?
             </h1>
           </legend>
 
       
-          <div class="nhsuk-radios nhsuk-radios--inline">
+          <div class="nhsuk-radios nhsuk-radios">
       
             <div class="nhsuk-radios__item">
               <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="./doc-upload/doc-upload" onclick="setLocation(this);">
               <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
-                Yes
+                Taking a career break
               </label>
             </div>
       
             <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="example-inline-2" name="example-inline" type="radio" value="update-career-break" onclick="setLocation(this);">
+              <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
+                Currently on a career break
+              </label>
+            </div>
+
+            <div class="nhsuk-radios__item">
               <input class="nhsuk-radios__input" id="example-inline-2" name="example-inline" type="radio" value="effective-date-of-change" onclick="setLocation(this);">
               <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
-                No
+                Taking unpaid leave 
               </label>
             </div>
       
