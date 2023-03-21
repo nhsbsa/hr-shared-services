@@ -1,6 +1,6 @@
 // External dependencies
 var NotifyClient = require('notifications-node-client').NotifyClient,
-    notify = new NotifyClient(process.env.NOTIFYAPIKEY);
+    notify = new NotifyClient('process.env.9be5ec1b-f595-48d3-a9d6-095f23092215');
 
 
 const express = require('express');
