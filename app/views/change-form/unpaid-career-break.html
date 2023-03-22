@@ -14,8 +14,7 @@
 
 <!-- Set the page title -->
 {% block pageTitle %}
-Is [employee name] taking a career break? - Submit a request to NHS Recruitment Services - NHSBSA
-{% endblock %}
+Is the employee taking a career break or unpaid leave? - [SERVICE NAME]- NHSBSA{% endblock %}
 
 <!-- For adding a breadcrumb -->
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
@@ -46,17 +45,20 @@ Is [employee name] taking a career break? - Submit a request to NHS Recruitment 
           <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
             <h1 class="nhsuk-fieldset__heading">
               <span class="nhsuk-caption-l nhsuk-caption--bottom">Change details</span>
-             What change do you need to make to Jane Doe's working situation?
-            </h1>
+              Is [employee name] taking a career break or unpaid leave?            </h1>
           </legend>
 
       
           <div class="nhsuk-radios nhsuk-radios">
       
+            <div class="nhsuk-hint" id="contact-hint">
+              Select one option
+            </div>
+
             <div class="nhsuk-radios__item">
               <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="./doc-upload/doc-upload" onclick="setLocation(this);">
               <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
-                Taking a career break
+                Due to take a career break
               </label>
             </div>
       
@@ -70,7 +72,7 @@ Is [employee name] taking a career break? - Submit a request to NHS Recruitment 
             <div class="nhsuk-radios__item">
               <input class="nhsuk-radios__input" id="example-inline-2" name="example-inline" type="radio" value="effective-date-of-change" onclick="setLocation(this);">
               <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
-                Taking unpaid leave 
+                Due to take unpaid leave 
               </label>
             </div>
       

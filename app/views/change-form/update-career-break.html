@@ -14,8 +14,7 @@
 
 <!-- Set the page title -->
 {% block pageTitle %}
-How would you like to update Jane Doe's career break? - Submit a request to NHS Recruitment Services - NHSBSA
-{% endblock %}
+How would you like to update employee career break? - [SERVICE NAME]- NHSBSA{% endblock %}
 
 <!-- For adding a breadcrumb -->
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
@@ -51,8 +50,11 @@ How would you like to update Jane Doe's career break? - Submit a request to NHS 
           </legend>
 
       
-          <div class="nhsuk-radios nhsuk-radios--inline">
+          <div class="nhsuk-radios">
       
+            <div class="nhsuk-hint" id="contact-hint">
+              Select one option
+            </div>
             <div class="nhsuk-radios__item">
               <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="extension-date" onclick="setLocation(this);">
               <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
@@ -63,8 +65,7 @@ How would you like to update Jane Doe's career break? - Submit a request to NHS 
             <div class="nhsuk-radios__item">
               <input class="nhsuk-radios__input" id="example-inline-2" name="example-inline" type="radio" value="return-date" onclick="setLocation(this);">
               <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
-                Provide an agreed return to work date, pay to be reinstated 
-              </label>
+                Provide an agreed return to work date and reinstate pay              </label>
             </div>
 
 
