@@ -14,7 +14,7 @@
 
 <!-- Set the page title -->
 {% block pageTitle %}
-What is the [employee name]'s payroll number? - Submit a request to NHS Recruitment Services - NHSBSA
+Does [employee name] have a payroll number? - Submit a request to NHS Recruitment Services - NHSBSA
 {% endblock %}
 
 <!-- For adding a breadcrumb -->
@@ -49,16 +49,48 @@ What is the [employee name]'s payroll number? - Submit a request to NHS Recruitm
         <h1 class="nhsuk-label-wrapper">
           <span class="nhsuk-caption-l nhsuk-caption--bottom">Employee details</span>
             <label class="nhsuk-label nhsuk-label--l" for="example-heading">
-              What is Jane Doe's payroll number?
+              Does Jane Doe have a payroll number?
             </label>
             <div class="nhsuk-hint" id="example-with-hint-text-hint">
               You can find the payroll number in ESR.
               For example, 12457146
             </div>
           </h1>
-        <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+                
+          <div class="nhsuk-radios nhsuk-radios--conditional">
+      
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="payroll-number-1" name="payroll-number" type="radio" value="payroll-number" aria-controls="conditional-payroll-number-1" aria-expanded="false">
+              <label class="nhsuk-label nhsuk-radios__label" for="payroll-number-1">
+                Yes, the employee has a payroll number.
+              </label>
+            </div>
+      
+            <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-payroll-number-1">
+      
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label" for="payroll-number-1">
+                  Payroll number
+                </label>
+                <input class="nhsuk-input nhsuk-u-width-two-thirds" id="payroll-number-1" name="payroll-number-1" type="text">
+              </div>
+      
+            </div>
+          
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="payroll-number-2" name="payroll-number" type="radio" value="payroll-number" aria-controls="conditional-payroll-number-2" aria-expanded="false">
+              <label class="nhsuk-label nhsuk-radios__label" for="payroll-number-2">
+                No, the employee is a new starter and doesn't have a payroll number yet.
+              </label>
+            </div>
+      
+ 
+      
+          </div>
+        </fieldset>
+      
       </div>
-     
+
 
       {{ button({
         "text": "Continue",
