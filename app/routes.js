@@ -3,8 +3,8 @@ var NotifyClient = require('notifications-node-client').NotifyClient,
     notify = new NotifyClient('process.env.9be5ec1b-f595-48d3-a9d6-095f23092215');
 
 
+// External dependencies
 const express = require('express');
-
 const router = express.Router();
 
 // Add your routes here - above the module.exports line
@@ -29,4 +29,11 @@ router.post('/change-form/login-screen', function (req, res) {
   res.redirect('/change-form/email-auth-code');
 
 });
+
+// ****************************************
+// Route File Versions
+// ****************************************
+
+router.use('/v1/apply', require('./views/v1/_routes'));
+
 module.exports = router;

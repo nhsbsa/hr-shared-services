@@ -3,7 +3,7 @@
 <!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
 
 <!-- Extends the layout from /views/layout.html -->
-{% extends 'layouts/layout.html' %}
+{% extends 'layouts/layout-transactional.html' %}
 {% from 'details/macro.njk' import details %}
 {% from 'button/macro.njk' import button %}
 <!-- 
@@ -14,7 +14,7 @@
 
 <!-- Set the page title -->
 {% block pageTitle %}
-  Sign in - Submit a request to NHS Recruitment Services - NHSBSA
+What is the employee's name? - Submit a request to NHS Recruitment Services - NHSBSA
 {% endblock %}
 
 <!-- For adding a breadcrumb -->
@@ -32,67 +32,45 @@
 {% block content %}
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
-      <form class="form" method="post">
+
       <!-- Change the page title here -->
+    
       <h1 class="nhsuk-heading-l">
-       Sign in to your NHS Recruitment Services account
+        <span class="nhsuk-caption-l nhsuk-caption--bottom">Requestor details</span>
+        What is your name?
       </h1>
 
- 
       <div class="nhsuk-form-group">
-        <label class="nhsuk-label" for="emailAddress">
-          Email address
+        <label class="nhsuk-label" for="input-width-20">
+          First name
         </label>
-        <input class="nhsuk-input" id="email-address" name="emailAddress" type="email" spellcheck="false" autocomplete="email">
-    
+        <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
       </div>
-
      
-     
-      <div class="nhsuk-form-group">
-        <label class="nhsuk-label" for="example">
-          Password
-        </label>
-        <input class="nhsuk-input" id="example" name="example" type="text">
-      </div>
     
 
-      <p class="nhsuk-body"><a href="forgot-password">Forgot your password?</a></p>
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="input-width-20">
+          Last name
+        </label>
+        <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+      </div>
+     
+
     
 
       {{ button({
-        "text": "Sign in"   
-      }) }}
-      </form>
-
-      <hr>
-
-      <h2 class="nhsuk-heading-m">
-        If you do not have an account 
-      </h2>
-
-      <p>
-
-        You can create a new account which will be approved by the HR shared services (HRSS) team, this can take up to 48 hours. 
-
-      
-        
-        </p>
-        <p>
-          An email will be sent to you with the approval decision. 
-              </p>
-
-      {{ button({
-        "text": "Create an account",
-        "classes": "nhsuk-button--secondary",
-        "href": "create-account"
+        "text": "Continue",
+        "href": "email"
       }) }}
 
+
+     
 
 
       <!-- Add your content here -->
       <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
- 
+
     </div>
     </div>
 
