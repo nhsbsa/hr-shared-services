@@ -1,0 +1,90 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layouts/layout-logged-in.html' %}
+{% from 'details/macro.njk' import details %}
+{% from 'button/macro.njk' import button %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+What is the new salary amount? - [SERVICE NAME]- NHSBSA
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+
+<div >
+  {{ backLink({
+      "href": "javascript:history.go(-1)",
+      "text": "Go back"
+    }) }}
+  </div>
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- Change the page title here -->
+    
+      <div class="nhsuk-form-group">
+
+        <h1 class="nhsuk-label-wrapper">
+          <span class="nhsuk-caption-l nhsuk-caption--bottom">Change details</span>
+            <label class="nhsuk-label nhsuk-label--l" for="example-heading">
+              What is the new salary amount?
+            </label>
+          </h1>
+
+          <div style="margin-bottom:50px;">
+            <div class="nhsuk-form-group" style="display: inline-block; align: left; margin-right: 24px;">
+
+              <label class="nhsuk-label" for="unitsPerWeek"> Enter an annual salary amount</label>
+              <span class="nhsuk-currency-input__inner__unit" style="position: inherit;">£</span>
+              <input class="nhsuk-input nhsuk-input--width-5 " id="salary_fixed" type="number" step="0.01" name="salary[fixed][count]" value="" autocomplete="off">
+            </div>
+     
+         
+
+
+     
+      </div>
+    
+     
+
+      {{ button({
+        "text": "Continue",
+        "href": "effective-date-of-change"
+      }) }}
+
+
+     
+
+
+      <!-- Add your content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+
+    </div>
+    </div>
+
+
+
+
+      
+      {% endblock %}

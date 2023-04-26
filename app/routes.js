@@ -34,6 +34,7 @@ router.post('/change-form/login-screen', function (req, res) {
 // Route File Versions
 // ****************************************
 
+router.use('/v2/apply', require('./views/v2/_routes'));
 router.use('/v1/apply', require('./views/v1/_routes'));
 
 module.exports = router;

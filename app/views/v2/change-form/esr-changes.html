@@ -1,0 +1,99 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layouts/layout-logged-in.html' %}
+{% from 'details/macro.njk' import details %}
+{% from 'button/macro.njk' import button %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Contact the NHSBSA
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div >
+  {{ backLink({
+      "href": "javascript:history.go(-1)",
+      "text": "Go back"
+    }) }}
+  </div>
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- Change the page title here -->
+      <h1>
+       Changes that can be made in Manage Self Service (MSS)
+      </h1>
+
+
+      <div class="nhsuk-inset-text">
+        <span class="nhsuk-u-visually-hidden">Information: </span>
+        <p class="nhsuk-body">        
+          If any change is part of an existing Trac recruitment, you must complete the recruitment activity in Trac. Do not submit the changes via Manager Self Service (MSS) or the Employee Change Form (ECF).
+         </p>
+      </div>
+
+
+      <p class="nhsuk-body">        
+        All Managers can now process a wide range of assignment actions for their direct reports as listed below:
+      </p>
+
+      <ul class="nhsuk-list nhsuk-list--bullet">
+        <li>termination of employment</li>
+        <li>change of supervisor</li>
+        <li>change of hours</li>
+        <li>job title</li>
+        <li>acting up</li>
+        <li>extension or return from acting up</li>
+        <li>extension or return from secondment</li>
+        <li>department relocation</li>
+        <li>extension of fixed term contract</li>
+        <li>change of post</li>
+        <li>fixed term contract made permanent</li>
+        <li>changes to a secondment</li>
+      </ul>
+
+     
+      
+
+      <p class="nhsuk-body">
+        All change requests received for any of the above changes will be rejected, other than changes which cannot be completed via MSS.
+      </p> 
+        
+      <p class="nhsuk-body">
+        For example a ‘future dated change’. This will need to be detailed in the additional information box when completing the form to prevent it from being rejected.
+      </p>
+      
+
+   
+
+      <!-- Add your content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+
+
+</div>
+</div>
+
+
+      
+      {% endblock %}

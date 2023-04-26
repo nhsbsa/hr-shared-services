@@ -1,0 +1,103 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layouts/layout-logged-in.html' %}
+{% from 'details/macro.njk' import details %}
+{% from 'button/macro.njk' import button %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+Duration of additional salary payments - Submit a request to NHS Recruitment Services - NHSBSA
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+
+<div >
+  {{ backLink({
+      "href": "javascript:history.go(-1)",
+      "text": "Go back"
+    }) }}
+  </div>
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- Change the page title here -->
+    
+      <div class="nhsuk-form-group">
+
+        <h1 class="nhsuk-label-wrapper">
+          <span class="nhsuk-caption-l nhsuk-caption--bottom">Change details</span>
+            <label class="nhsuk-label nhsuk-label--l" for="example-heading">
+              What is the duration of additional salary payments?
+            </label>
+          </h1>
+
+         
+
+
+          <div class="nhsuk-form-group" style="float: left; padding-right: 20px;">
+            <label class="nhsuk-label" for="input-width-2">
+             Duration 
+            </label>
+            <input class="nhsuk-input nhsuk-input--width-2" id="input-width-2" name="test-width-2" type="text">
+          </div>
+
+          <div class="nhsuk-form-group" >
+            <label class="nhsuk-label" for="select-1">
+              Per
+            </label>
+            <select class="nhsuk-select" id="select-1" name="select-1">
+              <option value="2" selected></option>
+              <option value="1">Month</option>
+              <option value="2" >Year</option>
+            </select>
+          </div>
+        
+
+      
+
+     
+      </div>
+    
+     
+
+      {{ button({
+        "text": "Continue",
+        "href": "finance-name"
+      }) }}
+
+
+     
+
+
+      <!-- Add your content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+
+    </div>
+    </div>
+
+
+
+
+      
+      {% endblock %}

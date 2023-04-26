@@ -1,0 +1,120 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layouts/layout-logged-in.html' %}
+{% from 'details/macro.njk' import details %}
+{% from 'button/macro.njk' import button %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+What is the employee's name? - Submit a request to NHS Recruitment Services - NHSBSA
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- Change the page title here -->
+    
+      <h1 class="nhsuk-heading-l">
+        <span class="nhsuk-caption-l nhsuk-caption--bottom">Employee details</span>
+        What is the employee's name?
+      </h1>
+
+      <p class="nhsuk-body nhsuk-hint" style="margin-bottom: 30px;">
+        Enter the employee's name as shown on official documents. For example, on their passport or in the Electronic Staff Record (ESR). 
+      </p>
+
+
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="select-1">
+          Title
+        </label>
+        <select class="nhsuk-select" id="select-1" name="select-1">
+          <option value="2" selected></option>
+          <option value="1">Mr</option>
+          <option value="2">Mrs</option>
+          <option value="3" >Miss</option>
+          <option value="4" >Ms</option>
+          <option value="5">Mx</option>
+          <option value="6" >Dr</option>
+          <option value="7" >Prof</option>
+          <option value="8" >Baron</option>
+          <option value="9">Baroness</option>
+          <option value="10" >Brother</option>
+          <option value="11" >Canon</option>
+          <option value="12" >Dame</option>
+          <option value="13">ather</option>
+          <option value="14" >Imam</option>
+          <option value="3" >Lady</option>
+          <option value="3" >Lord</option>
+          <option value="1">Major</option>
+          <option value="2" >Nurse</option>
+          <option value="3" >Rabbi</option>
+          <option value="3" >Reverend</option>
+          <option value="1">Right reverend monsigneur</option>
+          <option value="2" >Mrs</option>
+          <option value="3" >Sir</option>
+          <option value="3" >Sister</option>
+         
+        </select>
+      </div>
+
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="input-width-20">
+          First name
+        </label>
+        <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+      </div>
+     
+    
+
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="input-width-20">
+          Last name
+        </label>
+        <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+      </div>
+     
+
+    
+
+      {{ button({
+        "text": "Continue",
+        "href": "current-position-no"
+      }) }}
+
+
+     
+
+
+      <!-- Add your content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+
+    </div>
+    </div>
+
+
+
+
+      
+      {% endblock %}

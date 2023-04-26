@@ -1,0 +1,122 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layouts/layout-logged-in.html' %}
+{% from 'details/macro.njk' import details %}
+{% from 'button/macro.njk' import button %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Start - Submit a request to NHS Recruitment Services - NHSBSA
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- Change the page title here -->
+      <h1>
+        Submit a request to NHS Recruitment Services
+      </h1>
+
+      <p class="nhsuk-body">
+        Use this portal to request changes to the HR records of your employees. You'll be able add documents to support the change. 
+      </p>
+
+
+      <p class="nhsuk-body">Some changes can be made in the
+        <a href="https://nhsbsa-live.powerappsportals.com/knowledgebase/article/KA-24877/en-us" target="_blank"> Manage Self-Service (MSS) (opens in a new tab)</a>. 
+  
+     
+        You should attempt to make these changes in the MSS before submitting a request using this portal. 
+      </p>
+
+
+      <p class="nhsuk-u-font-size-19">Changes you can make through this portal:</p>
+          <ul class="nhsuk-list nhsuk-list--bullet">
+            <li>all allowances</li> 
+            <li>annual leave amendments</li>
+            <li>band or grade</li>
+            <li>career break</li>
+            <li>career progression</li>
+            <li>extension of probation</li>
+            <li>flexible working</li>
+            <li>future date changes</li>
+            <li>maternity, paternity, shared parental or adoption leave details</li>
+            <li>new starter form</li>
+            <li>pay step points</li>
+            <li>personal salaries</li>
+            <li>promotions</li>
+            <li>removal of absence and sickness</li>
+            <li>term-time working</li>
+            <li>unpaid leave</li>
+          </ul>
+          
+    
+      
+
+
+  
+
+      <p class="nhsuk-body">
+        HR Shared Services will retain responsibility for contractors and flexi-retirement.      </p>
+
+
+        <h2 class="nhsuk-heading">Before you start</h2>
+
+        <p class="nhsuk-body">
+          You'll be asked to fill out details about the employee. You can find employee employment details in the Electronic Staff Record (ESR).         </p>
+
+      <div class="nhsuk-warning-callout">
+        <h3 class="nhsuk-warning-callout__label">
+          <span role="text">
+            <span class="nhsuk-u-visually-hidden">Important: </span>
+            Delays when changing pay details
+          </span>
+        </h3>
+
+          
+          <p>Any changes related to the employee's pay may be delayed if submitted during the Payroll inputting period. </p>
+          <p>You can find the Payroll inputting period dates on your local intranet or hub.  </p>
+
+
+      </div>
+    
+
+
+      {{ button({
+        "text": "Start",
+        "href": "./employee-details/name"
+      }) }}
+
+      <!-- Add your content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+
+
+</div>
+</div>
+
+
+      
+      {% endblock %}

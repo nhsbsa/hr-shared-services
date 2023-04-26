@@ -3,7 +3,7 @@
 <!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
 
 <!-- Extends the layout from /views/layout.html -->
-{% extends 'layouts/layout-transactional.html' %}
+{% extends 'layouts/layout-logged-out.html' %}
 {% from 'details/macro.njk' import details %}
 {% from 'button/macro.njk' import button %}
 <!-- 
@@ -32,6 +32,11 @@ What is the employee's name? - Submit a request to NHS Recruitment Services - NH
 {% block content %}
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
+
+      {{ backLink({
+        "href": "javascript:history.go(-1)",
+        "text": "Go back"
+      }) }}
 
       <!-- Change the page title here -->
     

@@ -12,7 +12,7 @@
 
 <!-- Set the page title -->
 {% block pageTitle %}
-  HR Shared Services
+HR Shared Services
 {% endblock %}
 
 <!-- For adding a breadcrumb -->
@@ -33,14 +33,14 @@
 
     <!-- Change the page title here -->
     <h1>
-     HR Shared Services - Submit a request to NHS Recruitment Services
-      <span class="nhsuk-caption-xl nhsuk-caption--bottom">Version index</span>
+      HR Shared Services
+      <span class="nhsuk-caption-xl nhsuk-caption--bottom">Submit a request to NHS Recruitment Services</span>
     </h1>
 
     <!-- Add your content here -->
     <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
 
- 
+
 
 
 
@@ -51,78 +51,149 @@
     <details class="nhsuk-details nhsuk-expander">
       <summary class="nhsuk-details__summary">
         <span class="nhsuk-details__summary-text">
-          Sprint 1 - Document upload
-         
+          Sprint 1 - HRSS
+
         </span>
-        <strong class="nhsuk-tag nhsuk-tag--grey" style="float: right;">
-          In progress
+        <strong class="nhsuk-tag" style="float: right;">
+          MVP
         </strong>
       </summary>
       <div class="nhsuk-details__text">
-   <div>
-                 
-                <h3 class="nhsuk-heading-s">
-                  Information and documents related to the design 
-                </h3>
-                 
-                     <ul class="nhsuk-list nhsuk-list--bullet">
-                     <li style="list-style-type: disc; padding-left: 4px; margin-bottom: 8px; margin-left: 23px;"><a href="https://miro.com/app/board/uXjVOCIzQ_s=/?moveToWidget=3458764548706513667&cot=14">Miro board</a></li>
-         
-                   </ul>
-        
-        
-         
-                   <h3 class="nhsuk-heading-s">User research</h3>
-         
-                   <p class="nhsuk-body">[User need, UR/recommendation summary]</p>
-                     
-         
-                   <h3 class="nhsuk-heading-s">Changes from previous iteration</h3>
-         
-                   <ul class="nhsuk-list nhsuk-list--bullet">
-                     <li>Content revised and updated according to content designer's input</li>
-                     <li>"What's Jane Doe's payroll number?" screen updated to accomodate for new starter form journey</li>
-                     <li>Until the Account / Login mechanism is built, we will manually have to capture requestors name and email address</li>
-                   </ul>
-         
-                   </div>
-         
-                     <div class="nhsuk-action-link">
-           <a class="nhsuk-action-link__link" href="./v1/change-form/login-screen">
-             <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-               <path d="M0 0h24v24H0z" fill="none"></path>
-               <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
-             </svg>
-             <span class="nhsuk-action-link__text">Go to prototype</span>
-           </a>
-         </div>
-         <hr>
-         <h4 class="nhsuk-heading-xs">Account / Login</h4>
-         <ul class="nhsuk-list nhsuk-list--bullet">
+        <div>
+
+          <h3 class="nhsuk-heading-s">
+            Information and documents related to the design
+          </h3>
+
+          <ul class="nhsuk-list nhsuk-list--bullet">
+            <li style="list-style-type: disc; padding-left: 4px; margin-bottom: 8px; margin-left: 23px;"><a
+                href="https://miro.com/app/board/uXjVMOg25Ck=/">User Flow (MVP)</a>
+            </li>
+
+          </ul>
+
+
+
+          <h3 class="nhsuk-heading-s">User research</h3>
+
+          <p class="nhsuk-body">[User need, UR/recommendation summary]</p>
+
+
+          <h3 class="nhsuk-heading-s">Changes from previous iteration</h3>
+
+          <ul class="nhsuk-list nhsuk-list--bullet">
+            <li>Content revised and updated according to content designer's input</li>
+            <li>"What's Jane Doe's payroll number?" screen updated to accomodate for new starter form journey</li>
+            <li>Until the Account / Login mechanism is built, we will manually have to capture requestors name and email
+              address</li>
+          </ul>
+
+        </div>
+
+        <div class="nhsuk-action-link">
+          <a class="nhsuk-action-link__link" href="./v1/change-form/landing-page">
+            <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M0 0h24v24H0z" fill="none"></path>
+              <path
+                d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z">
+              </path>
+            </svg>
+            <span class="nhsuk-action-link__text">Go to prototype</span>
+          </a>
+        </div>
+        <hr>
+        <h4 class="nhsuk-heading-xs">Error Messages</h4>
+        <ul class="nhsuk-list nhsuk-list--bullet">
+          <li><a href="./v1/errors/403">403</a></li>
+          <li><a href="./v1/errors/404">404</a></li>
+          <li><a href="./v1/errors/500">500</a></li>
+          <li><a href="./v1/errors/503-generic">503 (Generic)</a></li>
+          <li><a href="./v1/errors/503-specific">503 (Specific)</a></li>
+        </ul>
+
+      </div>
+    </details>
+
+    <details class="nhsuk-details nhsuk-expander">
+      <summary class="nhsuk-details__summary">
+        <span class="nhsuk-details__summary-text">
+          Sprint 2 - HRSS
+
+        </span>
+        <strong class="nhsuk-tag nhsuk-tag--grey" style="float: right;">
+          Iteration 2
+        </strong>
+      </summary>
+      <div class="nhsuk-details__text">
+        <div>
+
+          <h3 class="nhsuk-heading-s">
+            Information and documents related to the design
+          </h3>
+
+          <ul class="nhsuk-list nhsuk-list--bullet">
+            <li style="list-style-type: disc; padding-left: 4px; margin-bottom: 8px; margin-left: 23px;"><a
+                href="https://miro.com/app/board/uXjVOCIzQ_s=/?moveToWidget=3458764548706513667&cot=14">Miro board</a>
+            </li>
+
+          </ul>
+
+
+
+          <h3 class="nhsuk-heading-s">User research</h3>
+
+          <p class="nhsuk-body">[User need, UR/recommendation summary]</p>
+
+
+          <h3 class="nhsuk-heading-s">Changes from previous iteration</h3>
+
+          <ul class="nhsuk-list nhsuk-list--bullet">
+            <li>Added in the Account / Login mechanism</li>
+          </ul>
+
+        </div>
+
+        <div class="nhsuk-action-link">
+          <a class="nhsuk-action-link__link" href="./v2/change-form/login-screen">
+            <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M0 0h24v24H0z" fill="none"></path>
+              <path
+                d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z">
+              </path>
+            </svg>
+            <span class="nhsuk-action-link__text">Go to prototype</span>
+          </a>
+        </div>
+        <hr>
+        <h4 class="nhsuk-heading-xs">Account / Login</h4>
+        <ul class="nhsuk-list nhsuk-list--bullet">
           <li><a href="./v1/change-form/email-only-login-screen">Email only sign in</a></li>
           <li><a href="./v1/change-form/login-screen">Email and password sign in</a></li>
           <li><a href="./v1/change-form/login-screen-esr">ESR screens included</a></li>
         </ul>
         <h4 class="nhsuk-heading-xs">Error Messages</h4>
         <ul class="nhsuk-list nhsuk-list--bullet">
-         <li><a href="./v1/errors/403">403</a></li>
-         <li><a href="./v1/errors/404">404</a></li>
-         <li><a href="./v1/errors/500">500</a></li>
-         <li><a href="./v1/errors/503-generic">503 (Generic)</a></li>
-         <li><a href="./v1/errors/503-specific">503 (Specific)</a></li>
-       </ul>
+          <li><a href="./v1/errors/403">403</a></li>
+          <li><a href="./v1/errors/404">404</a></li>
+          <li><a href="./v1/errors/500">500</a></li>
+          <li><a href="./v1/errors/503-generic">503 (Generic)</a></li>
+          <li><a href="./v1/errors/503-specific">503 (Specific)</a></li>
+        </ul>
 
       </div>
     </details>
-  
 
+
+<!--
     <h2>
-     Resources 
+      Resources
     </h2>
 
     <p>Template to <a href="add-iteration-template">add a design iteration to the prototype</a></p>
+-->
 
-   
 
 
 
